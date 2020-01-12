@@ -1,0 +1,8 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: l.gcr.io/google/bazel
+    steps:
+      - checkout
+      - run: bazel test //... --test_output=all
